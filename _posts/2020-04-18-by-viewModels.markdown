@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "by viewModels()"
-date:   2020-04-04 16:55:00 +0900
+date:   2020-04-18 16:55:00 +0900
 categories: Android
 ---
 
@@ -94,7 +94,7 @@ fun main() {
 > Hello  
 > Hello
 
-참고로, [Lazy.kt]를 보면 `getValue`가 extension으로, T의 인스턴스인 `value`를 리턴하게 되있다.
+참고로, [Lazy.kt]를 보면 `getValue`가 extension으로 정의되있고, T의 인스턴스인 `value`를 리턴하게 되있다.
 {% highlight kotlin %}
 @kotlin.internal.InlineOnly
 public inline operator fun <T> Lazy<T>.getValue(thisRef: Any?, property: KProperty<*>): T = value
