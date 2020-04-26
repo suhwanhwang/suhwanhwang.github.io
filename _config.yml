@@ -42,3 +42,7 @@ plugins:
 # Disqus settings
 disqus:
   shortname: suhwanhwang
+
+# Google Analytics
+google_analytics: 
+  UA-164633303-1
