@@ -14,11 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Suhwan's Blog
-email: suhwanh7@gmail.com
+email: shwang@shwang.dev
 description: >- # this means to ignore newlines until "baseurl:"
   Study and Share Everything
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://suhwanhwang.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://shwang.dev" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: suhwanhwang
 
 # Build settings
@@ -41,4 +41,4 @@ plugins:
 
 # Disqus settings
 disqus:
-  shortname: suhwanhwang
+  shortname: shwang.dev
