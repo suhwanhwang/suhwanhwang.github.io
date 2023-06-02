@@ -32,3 +32,5 @@ gem 'jekyll-sitemap'
 
 gem "kramdown-parser-gfm"
 
+gem "jekyll-remote-theme"
+
