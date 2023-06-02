@@ -16,17 +16,18 @@
 title: Suhwan's Blog
 email: shwang@shwang.dev
 description: >- # this means to ignore newlines until "baseurl:"
-  Study and Share Everything
+    Study and Share Everything
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shwang.dev" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: suhwanhwang
 
 # Build settings
 markdown: kramdown
-theme: minima
+remote_theme: jekyll/minima
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+    - jekyll-feed
+    - jekyll-sitemap
+    - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -42,8 +43,7 @@ plugins:
 
 # Disqus settings
 disqus:
-  shortname: suhwanhwang
+    shortname: suhwanhwang
 
 # Google Analytics
-google_analytics: 
-  UA-164633303-1
+google_analytics: G-FC9L4TTEQL
