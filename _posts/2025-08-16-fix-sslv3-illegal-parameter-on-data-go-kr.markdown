@@ -97,15 +97,3 @@ def http_get_json_compat(url: str, timeout: int = 10) -> dict:
 - Certifi 문서: [`https://certifiio.readthedocs.io/en/latest/`](https://certifiio.readthedocs.io/en/latest/)
 - OpenSSL 보안 레벨: [SSL_CTX_set_security_level](https://www.openssl.org/docs/man3.0/man3/SSL_CTX_set_security_level.html)
 
-
-## 진단 팁
-
-- curl로 TLS 버전 고정 비교: `curl --tlsv1.2 -v "https://apis.data.go.kr/..."`
-- OpenSSL로 핸드셰이크 확인: `openssl s_client -tls1_2 -connect apis.data.go.kr:443 -servername apis.data.go.kr`
-- 런타임 OpenSSL 버전 확인: `python -c "import ssl; print(ssl.OPENSSL_VERSION)"`
-
-## 왜 이 설정이 효과적인가
-
-- TLS 1.2 강제: 일부 서버가 TLS 1.3 확장/파라미터를 제대로 처리하지 못해 핸드셰이크가 실패할 수 있습니다.
-- `@SECLEVEL=1`: OpenSSL의 기본 보안 레벨 상승으로 차단된 레거시 암호군을 제한적으로 허용합니다.
-- `certifi`: 환경마다 다른 시스템 CA 대신 최신 루트 CA 번들을 명시적으로 사용합니다.
