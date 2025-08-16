@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "공공데이터포털 SSL 오류(SSLV3_ALERT_ILLEGAL_PARAMETER) 간단 해결"
+title: "Python requests로 공공데이터포털 SSL 오류(SSLV3_ALERT_ILLEGAL_PARAMETER) 해결기"
 date: 2025-08-16 15:10:00 +0900
 categories: internet
 tags: [python, requests, tls, openssl, certifi, 공공데이터포털]
@@ -8,28 +8,55 @@ tags: [python, requests, tls, openssl, certifi, 공공데이터포털]
 
 ## 증상
 
-`requests`로 `apis.data.go.kr` 호출 시 SSL 오류가 발생합니다:
+공공데이터포털(`apis.data.go.kr`) API를 Python `requests`로 호출할 때 아래와 같은 SSL 오류가 발생했습니다.
 
 ```text
-SSLError: [SSL: SSLV3_ALERT_ILLEGAL_PARAMETER] ...
+requests.exceptions.SSLError: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded ...
+(Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_ILLEGAL_PARAMETER] ssl/tls alert illegal parameter (_ssl.c:1006)')))
 ```
 
-## 원인
+### 특징
+- 동일 요청이 브라우저나 `curl`에서는 정상 동작
+- `requests`만 TLS 핸드셰이크 단계에서 실패
 
-- 서버의 TLS 1.3/특정 확장 호환성 문제
-- OpenSSL 기본 보안 레벨 상승으로 레거시 암호군 차단
+## 원인 추정
 
-## 해결 (요약)
+- **TLS 버전 협상 문제**: 일부 서버가 TLS 1.3 또는 특정 확장을 안정적으로 처리하지 못함
+- **OpenSSL 보안 레벨 상승 영향**: OpenSSL 3 기본 `SECLEVEL`이 높아져 레거시 암호군/해시가 거절될 수 있음
+- **클라이언트 기본값 차이**: `curl`과 `requests`가 사용하는 TLS 스택/암호군/확장이 상이
 
-- TLS 1.2로 고정
-- OpenSSL 보안 레벨 완화: `@SECLEVEL=1`
-- CA 번들 명시: `certifi`
-- 세션 단위로만 적용(전역 설정 변경 금지)
-
-## 최소 구현 예시
+## 재현 코드 (문제 상황)
 
 ```python
-import ssl, certifi, requests
+import requests
+
+url = "https://apis.data.go.kr/1160100/service/GetGeneralProductInfoService/getGoldPriceInfo?..."
+requests.get(url, timeout=10).json()  # SSL 오류 발생
+```
+
+## 진단 팁
+
+- curl로 TLS 버전 고정 비교: `curl --tlsv1.2 -v "https://..."`
+- OpenSSL로 핸드셰이크 확인: `openssl s_client -tls1_2 -connect apis.data.go.kr:443 -servername apis.data.go.kr`
+- Python 런타임의 OpenSSL 버전: `python -c "import ssl; print(ssl.OPENSSL_VERSION)"`
+
+## 해결 방법
+
+핵심은 서버가 수용 가능한 TLS 파라미터로 낮춰 호출하는 것입니다.
+
+- TLS 1.2로 고정
+- OpenSSL 보안 레벨 완화: `DEFAULT:@SECLEVEL=1`
+- 신뢰 저장소 명시: `certifi`의 CA 번들 사용
+- (선택) 연결 안정화를 위해 `Connection: close`
+
+## 안전한 구현 예시
+
+도메인 전용 세션을 만들어 필요한 범위에서만 정책을 완화합니다. 전역 설정은 바꾸지 않습니다.
+
+```python
+import ssl
+import certifi
+import requests
 from requests.adapters import HTTPAdapter
 
 class TLS12Adapter(HTTPAdapter):
@@ -45,26 +72,30 @@ class TLS12Adapter(HTTPAdapter):
         return super().init_poolmanager(*args, **kwargs)
 
 def http_get_json_compat(url: str, timeout: int = 10) -> dict:
-    s = requests.Session()
-    s.mount("https://", TLS12Adapter())
+    headers = {"Accept": "*/*", "Connection": "close"}
+    session = requests.Session()
+    session.mount("https://", TLS12Adapter())
     try:
-        r = s.get(
+        resp = session.get(
             url,
-            headers={"Accept": "*/*", "Connection": "close"},
+            headers=headers,
             timeout=timeout,
             allow_redirects=True,
             verify=certifi.where(),
         )
-        r.raise_for_status()
-        return r.json()
+        resp.raise_for_status()
+        return resp.json()
     finally:
-        s.close()
+        session.close()
 ```
 
-## 메모
 
-- 호환성 완화는 해당 도메인 세션에만 제한적으로 적용
-- 실패 시 재시도/로깅 추가 권장
+## 관련 리소스
+
+- 공공데이터포털: [`https://www.data.go.kr/`](https://www.data.go.kr/)
+- Requests 문서: [Advanced Usage — SSL](https://requests.readthedocs.io/en/latest/user/advanced/#ssl-cert-verification)
+- Certifi 문서: [`https://certifiio.readthedocs.io/en/latest/`](https://certifiio.readthedocs.io/en/latest/)
+- OpenSSL 보안 레벨: [SSL_CTX_set_security_level](https://www.openssl.org/docs/man3.0/man3/SSL_CTX_set_security_level.html)
 
 
 ## 진단 팁
@@ -78,16 +109,3 @@ def http_get_json_compat(url: str, timeout: int = 10) -> dict:
 - TLS 1.2 강제: 일부 서버가 TLS 1.3 확장/파라미터를 제대로 처리하지 못해 핸드셰이크가 실패할 수 있습니다.
 - `@SECLEVEL=1`: OpenSSL의 기본 보안 레벨 상승으로 차단된 레거시 암호군을 제한적으로 허용합니다.
 - `certifi`: 환경마다 다른 시스템 CA 대신 최신 루트 CA 번들을 명시적으로 사용합니다.
-
-## 보안·운영 고려사항
-
-- 전역이 아닌 "해당 세션"에만 완화 설정을 적용하세요.
-- 서버가 개선되어 TLS 1.3이 안정화되면 완화 옵션을 제거하세요.
-- 네트워크 이슈를 고려해 재시도와 상태/본문 로깅을 적절히 추가하세요.
-
-## 대안 접근
-
-- `httpx`로도 커스텀 TLS 컨텍스트를 구성할 수 있습니다.
-- `pycurl`은 curl 스택을 그대로 활용하므로 호환성은 높지만 배포 복잡도가 증가합니다.
-
-
