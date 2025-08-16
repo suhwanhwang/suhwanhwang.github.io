@@ -67,3 +67,27 @@ def http_get_json_compat(url: str, timeout: int = 10) -> dict:
 - 실패 시 재시도/로깅 추가 권장
 
 
+## 진단 팁
+
+- curl로 TLS 버전 고정 비교: `curl --tlsv1.2 -v "https://apis.data.go.kr/..."`
+- OpenSSL로 핸드셰이크 확인: `openssl s_client -tls1_2 -connect apis.data.go.kr:443 -servername apis.data.go.kr`
+- 런타임 OpenSSL 버전 확인: `python -c "import ssl; print(ssl.OPENSSL_VERSION)"`
+
+## 왜 이 설정이 효과적인가
+
+- TLS 1.2 강제: 일부 서버가 TLS 1.3 확장/파라미터를 제대로 처리하지 못해 핸드셰이크가 실패할 수 있습니다.
+- `@SECLEVEL=1`: OpenSSL의 기본 보안 레벨 상승으로 차단된 레거시 암호군을 제한적으로 허용합니다.
+- `certifi`: 환경마다 다른 시스템 CA 대신 최신 루트 CA 번들을 명시적으로 사용합니다.
+
+## 보안·운영 고려사항
+
+- 전역이 아닌 "해당 세션"에만 완화 설정을 적용하세요.
+- 서버가 개선되어 TLS 1.3이 안정화되면 완화 옵션을 제거하세요.
+- 네트워크 이슈를 고려해 재시도와 상태/본문 로깅을 적절히 추가하세요.
+
+## 대안 접근
+
+- `httpx`로도 커스텀 TLS 컨텍스트를 구성할 수 있습니다.
+- `pycurl`은 curl 스택을 그대로 활용하므로 호환성은 높지만 배포 복잡도가 증가합니다.
+
+
