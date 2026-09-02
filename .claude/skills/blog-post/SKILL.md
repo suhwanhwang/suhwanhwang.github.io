@@ -53,8 +53,16 @@ tags: [python, requests, tls]
 2. `git checkout -b post/<slug>`
 3. 포스트 파일 작성
 4. `bundle exec jekyll build`로 검증 — 경고나 에러가 없어야 한다
-5. 커밋 후 `git push -u origin post/<slug>`
-6. `gh pr create`로 PR 생성. PR 본문에는 글의 주제와 카테고리를 한두 줄로 요약
+   - Claude Code on the web 등 로케일이 UTF-8이 아닌 환경에서는 SCSS 변환 단계에서
+     `Invalid US-ASCII character` 에러가 난다. `LANG=C.UTF-8 LC_ALL=C.UTF-8`를 지정하고 빌드한다.
+   - `bundle exec jekyll`이 `command not found`면 gem은 설치돼 있어도 binstub이 없는 것이니
+     `ruby $(gem contents jekyll | grep exe/jekyll) build`로 exe를 직접 실행한다.
+   - 이 에러들은 테마/환경 문제이지 포스트 문제가 아니다. 포스트가 정상 렌더됐는지는
+     `_site/<categories>/<YYYY>/<MM>/<DD>/<slug>.html`이 생성됐는지로 확인한다.
+5. 커밋 후 `git push -u origin post/<slug>` (`_site` 등 빌드 산출물은 커밋에서 제외)
+6. PR 생성. PR 본문에는 글의 주제와 카테고리를 한두 줄로 요약
+   - `gh` CLI가 있으면 `gh pr create`, 없으면(원격 실행 환경 등) GitHub MCP
+     `mcp__github__create_pull_request`를 쓴다. base는 `master`.
 7. PR 링크를 사용자에게 알려주고, 검토 후 머지하면 된다고 안내
 
 `master`는 브랜치 보호가 걸려 있다(CI `build` 통과 필수). 절대 master에 직접 push하지 말고 반드시 PR을 경유한다.
