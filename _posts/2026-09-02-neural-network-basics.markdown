@@ -73,13 +73,13 @@ for 루프로 뉴런을 하나씩 돌면 느리지만, 행렬 곱으로 표현�
 수천 개 곱셈이 동시에 처리된다. 딥러닝(deep learning)이 GPU를 쓰는 이유다.
 
 ```kotlin
-// 개념적으로는
-for (뉴런 in 뉴런들) {
-    출력[뉴런] = 가중치[뉴런] dot 입력 + 편향[뉴런]
+// 개념적으로는: 뉴런마다 (가중치 · 입력) 내적에 편향을 더한다
+for (neuron in neurons) {
+    output[neuron] = weight[neuron] dot input + bias[neuron]
 }
 
-// 실제로는 (GPU 병렬 처리)
-출력 = W matmul 입력 + b
+// 실제로는 (GPU 병렬 처리): 층 전체가 행렬 곱 한 번
+output = W matmul input + b
 ```
 
 논문의 `xW₁ + b₁` 같은 식은 전부 이것이다. 층 하나일 뿐이다.
