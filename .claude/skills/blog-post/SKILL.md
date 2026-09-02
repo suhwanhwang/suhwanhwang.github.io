@@ -66,9 +66,16 @@ tags: [python, requests, tls]
 4. `bundle exec jekyll build`로 검증 — 경고나 에러가 없어야 한다
    - Claude Code on the web 등 로케일이 UTF-8이 아닌 환경에서는 SCSS 변환 단계에서
      `Invalid US-ASCII character` 에러가 난다. `LANG=C.UTF-8 LC_ALL=C.UTF-8`를 지정하고 빌드한다.
-   - `bundle exec jekyll`이 `command not found`면 gem은 설치돼 있어도 binstub이 없는 것이니
-     `ruby $(gem contents jekyll | grep exe/jekyll) build`로 exe를 직접 실행한다.
-   - 이 에러들은 테마/환경 문제이지 포스트 문제가 아니다. 포스트가 정상 렌더됐는지는
+   - 원격 실행 환경은 컨테이너가 새로 뜨므로 gem이 아예 설치돼 있지 않을 수 있다.
+     `command not found: jekyll`이나 `bundle list`에 jekyll이 없으면 먼저 `bundle install`을 돌린다.
+     (root로 실행하면 "Don't run Bundler as root" 경고가 뜨지만 설치는 정상 진행된다. 이 경고는 무시해도 된다.)
+   - `bundle install` 후에도 `bundle exec jekyll`이 `command not found`면 gem은 있어도 binstub이 없는 것이다.
+     이때는 gem의 exe를 직접 실행한다. `gem contents ... | grep`은 빈 값을 반환할 수 있으니 쓰지 말고,
+     아래처럼 `bundle info`로 경로를 잡는다:
+     ```bash
+     LANG=C.UTF-8 LC_ALL=C.UTF-8 bundle exec ruby "$(bundle info jekyll --path)/exe/jekyll" build
+     ```
+   - 이 에러들은 환경 문제이지 포스트 문제가 아니다. 포스트가 정상 렌더됐는지는
      `_site/<categories>/<YYYY>/<MM>/<DD>/<slug>.html`이 생성됐는지로 확인한다.
 5. 커밋 후 `git push -u origin post/<slug>` (`_site` 등 빌드 산출물은 커밋에서 제외)
 6. PR 생성. PR 본문에는 글의 주제와 카테고리를 한두 줄로 요약
