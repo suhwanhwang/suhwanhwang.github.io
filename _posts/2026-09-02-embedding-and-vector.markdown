@@ -136,3 +136,8 @@ fun lookup(tokenId: Int): FloatArray = embedding[tokenId]
 | 임베딩 | 단어를 벡터로 바꾼 것. 학습으로 얻어짐 |
 | 핵심 성질 | 의미가 비슷하면 공간에서 가깝다 |
 | 한계 | 문맥 반영 불가 → 어텐션이 해결 |
+
+## 참고
+
+- [Attention Is All You Need (Vaswani et al., 2017)](https://arxiv.org/abs/1706.03762) — 본문에서 언급한 트랜스포머 논문. 3.4절과 Figure 1이 임베딩 단계
+- [Efficient Estimation of Word Representations in Vector Space (Mikolov et al., 2013)](https://arxiv.org/abs/1301.3781) — word2vec. `king - man + woman ≈ queen`이 나온 곳
