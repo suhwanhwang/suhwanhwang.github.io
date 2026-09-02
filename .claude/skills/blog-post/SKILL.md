@@ -33,15 +33,26 @@ tags: [python, requests, tls]
   기존 값 중 맞는 게 있으면 재사용하고, 없으면 새로 만들되 한 단어 소문자로.
   permalink가 `/<categories>/<YYYY>/<MM>/<DD>/<slug>.html` 형태로 생성되므로 카테고리는 URL의 일부가 된다.
 - `tags`는 선택. 세부 키워드가 여러 개일 때만 붙인다.
-- 참고할 실제 파일: `_posts/2025-08-16-fix-sslv3-illegal-parameter-on-data-go-kr.markdown`(tags 있는 형태),
-  `_posts/2025-07-24-github-workflow-google-credentials-safely.markdown`
+- 참고할 실제 파일:
+  - 문제 해결형(증상→원인→해결): `_posts/2025-08-16-fix-sslv3-illegal-parameter-on-data-go-kr.markdown`(tags 있는 형태),
+    `_posts/2025-07-24-github-workflow-google-credentials-safely.markdown`
+  - 개념 설명형(구조를 억지로 맞추지 않은 예): `_posts/2026-09-02-embedding-and-vector.markdown`
 
 ## 작성 스타일
 
-- 한국어, 존댓말(기존 포스트들이 "~합니다" 체).
+- 한국어, 반말("~했다/~이다" 체). 이게 블로그 주인이 직접 쓰는 문체다.
+  2021년 이전 옛 글이 이 문체이니 참고할 것. 2025년 글은 존댓말이지만 AI가 쓴 것이라
+  기준이 아니다. 존댓말로 써달라는 요청이 따로 있을 때만 존댓말을 쓴다.
+- 도입부는 한두 문장으로 글이 무엇을 다루는지/왜 쓰는지 제시하고 본문으로 들어간다.
+  (예: "이 글에서는 그 방법을 단계별로 정리한다.")
+- 본문 섹션 제목은 `##`부터 시작한다. `#`(h1)은 포스트 제목 몫이다. 하위 절은 `###`.
+- 본문이 논문·문서·라이브러리 등 외부 자료를 언급하면 맨 끝에 `## 참고` 섹션을 두고
+  그 원 출처 링크를 목록으로 넣는다. 본문에서 실제로 인용/언급한 것만 넣고, 각 링크 뒤에
+  무엇인지 한 줄로 덧붙인다. 언급한 자료가 없으면 이 섹션은 생략한다.
 - 최근 포스트들의 구조를 따른다: 증상/문제 → 원인 → 해결 → (필요시) 정리.
-  단순 소개성 글이면 이 구조를 억지로 맞추지 말고 자연스럽게.
-- 코드블록에는 반드시 언어 태그를 붙인다.
+  단순 소개성·개념 설명 글이면 이 구조를 억지로 맞추지 말고 자연스럽게.
+- 코드블록은 펜스(```` ``` ````)에 언어 태그를 붙인다. 옛 글의 Liquid
+  `{% highlight %}` 태그는 쓰지 않는다. 표·다이어그램 같은 순수 텍스트 블록은 `text`.
 - 대화 로그를 그대로 옮기지 말고, 결론과 근거만 남겨 글로 재구성한다.
   "제가 물어봤더니" 같은 대화 흔적, 시행착오 중 틀린 정보는 빼거나 정리한다.
 - **붙여넣은 내용에 섞인 개인정보·API 키·토큰·내부 경로는 반드시 제거하거나 placeholder로 치환한다.**
@@ -53,8 +64,16 @@ tags: [python, requests, tls]
 2. `git checkout -b post/<slug>`
 3. 포스트 파일 작성
 4. `bundle exec jekyll build`로 검증 — 경고나 에러가 없어야 한다
-5. 커밋 후 `git push -u origin post/<slug>`
-6. `gh pr create`로 PR 생성. PR 본문에는 글의 주제와 카테고리를 한두 줄로 요약
+   - Claude Code on the web 등 로케일이 UTF-8이 아닌 환경에서는 SCSS 변환 단계에서
+     `Invalid US-ASCII character` 에러가 난다. `LANG=C.UTF-8 LC_ALL=C.UTF-8`를 지정하고 빌드한다.
+   - `bundle exec jekyll`이 `command not found`면 gem은 설치돼 있어도 binstub이 없는 것이니
+     `ruby $(gem contents jekyll | grep exe/jekyll) build`로 exe를 직접 실행한다.
+   - 이 에러들은 테마/환경 문제이지 포스트 문제가 아니다. 포스트가 정상 렌더됐는지는
+     `_site/<categories>/<YYYY>/<MM>/<DD>/<slug>.html`이 생성됐는지로 확인한다.
+5. 커밋 후 `git push -u origin post/<slug>` (`_site` 등 빌드 산출물은 커밋에서 제외)
+6. PR 생성. PR 본문에는 글의 주제와 카테고리를 한두 줄로 요약
+   - `gh` CLI가 있으면 `gh pr create`, 없으면(원격 실행 환경 등) GitHub MCP
+     `mcp__github__create_pull_request`를 쓴다. base는 `master`.
 7. PR 링크를 사용자에게 알려주고, 검토 후 머지하면 된다고 안내
 
 `master`는 브랜치 보호가 걸려 있다(CI `build` 통과 필수). 절대 master에 직접 push하지 말고 반드시 PR을 경유한다.
