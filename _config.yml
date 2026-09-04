@@ -20,6 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shwang.dev" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: suhwanhwang
+lang: ko_KR # used by jekyll-seo-tag for og:locale and <html lang>
 
 # Build settings
 markdown: kramdown
@@ -27,6 +28,7 @@ remote_theme: jekyll/minima
 plugins:
     - jekyll-feed
     - jekyll-sitemap
+    - jekyll-seo-tag
     - jekyll-remote-theme
 
 # Exclude from processing.
