@@ -7,7 +7,8 @@ tags: [rnn, lstm, gru, attention, transformer]
 ---
 
 트랜스포머 논문("Attention Is All You Need")의 1장은 "이것들의 한계 때문에 새 구조를 만들었다"고
-말한다. 그 "이것들"이 바로 RNN과 LSTM, 트랜스포머 이전 세대의 순차 처리 구조다.
+말한다. 그 "이것들"이 바로 RNN(Recurrent Neural Network, 순환 신경망)과
+LSTM(Long Short-Term Memory, 장단기 기억), 트랜스포머 이전 세대의 순차 처리 구조다.
 이 글은 왜 이런 구조가 필요했고, 어떤 문제에 부딪혔으며, 트랜스포머가 그 문제를 어떻게
 넘어섰는지를 정리한 것이다.
 
