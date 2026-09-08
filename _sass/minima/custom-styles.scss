@@ -1,0 +1,39 @@
+// minima 테마의 동명 placeholder를 덮어쓴다. 모든 스타일보다 뒤에 적용된다.
+
+// 블록 수식: 긴 식이 본문 폭을 밀어내지 않게 자체 스크롤을 준다.
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5em 0;
+}
+
+// Mermaid 다이어그램: 코드 블록 껍데기를 벗기고 가운데 정렬한다.
+pre.mermaid {
+  background: none;
+  border: 0;
+  padding: 0;
+  overflow-x: auto;
+  text-align: center;
+
+  // mermaid를 `fontFamily: 'inherit'`로 띄우는데, <pre>에 그대로 두면
+  // 코드 블록의 고정폭 글꼴을 물려받아 다이어그램 글씨가 monospace로 나온다.
+  // 본문 글꼴로 되돌린다.
+  font-family: inherit;
+  font-size: inherit;
+
+  // 스크립트가 그림으로 바꾸기 전까지 원본 소스가 잠깐 보이는 걸 막는다.
+  // 다만 4초 안에 렌더가 끝나지 않으면(CDN 차단 등) 소스라도 드러내 준다.
+  &:not([data-processed="true"]) {
+    visibility: hidden;
+    animation: mermaid-fallback 0s linear 4s forwards;
+  }
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@keyframes mermaid-fallback {
+  to { visibility: visible; }
+}

@@ -24,6 +24,10 @@ lang: ko_KR # used by jekyll-seo-tag for og:locale and <html lang>
 
 # Build settings
 markdown: kramdown
+kramdown:
+    # $$...$$ 를 \(...\) / \[...\] 로 내보낸다. KaTeX auto-render의 기본 구분자와 같다.
+    # (kramdown 2.x의 기본값이지만, 수식 렌더가 여기에 달려 있으므로 명시해 둔다)
+    math_engine: mathjax
 remote_theme: jekyll/minima
 plugins:
     - jekyll-feed
