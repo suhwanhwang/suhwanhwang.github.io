@@ -66,6 +66,12 @@ tags: [python, requests, tls]
   - 떨어진 subgraph 두 개는 배치 순서가 뒤집힐 수 있다. `flowchart TD` + 각 subgraph 안
     `direction LR` + 보이지 않는 링크 `A ~~~ B`로 위아래 순서를 고정한다.
   - 표로 충분한 내용(비교표, 복잡도표)은 그냥 표로 둔다. 그림으로 바꾸지 않는다.
+- **함수 그래프**(손실 곡선처럼 축과 곡선이 있는 그림)는 Mermaid로 안 된다.
+  `assets/img/<이름>.svg`에 SVG를 만들고 `![설명](/assets/img/<이름>.svg)`로 넣는다.
+  - 좌표는 눈대중하지 말고 스크립트로 계산해서 생성한다.
+  - 회색 계열(`#8a8a8a`, `#4a4a4a`)에 강조 하나(`#b4532a`)로, Mermaid `neutral` 테마와 톤을 맞춘다.
+  - **반드시 렌더해서 라벨이 곡선·다른 라벨과 겹치지 않는지 눈으로 확인한다.** 자주 겹친다.
+  - 기존 예: `assets/img/gradient-descent.svg`
 - 수식·다이어그램 스크립트는 본문에 실제로 쓰였을 때만 자동으로 로드된다
   (`_includes/custom-head.html`). front matter에 따로 쓸 게 없다.
   실제로 렌더되는지는 빌드 후 `_site`의 해당 HTML에 `katex@` / `mermaid@`가 들어갔는지로 확인한다.

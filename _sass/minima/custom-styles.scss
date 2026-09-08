@@ -37,3 +37,9 @@ pre.mermaid {
 @keyframes mermaid-fallback {
   to { visibility: visible; }
 }
+
+// 본문 그림(SVG 다이어그램 등)은 가운데 정렬한다.
+.post-content img {
+  display: block;
+  margin: 0 auto;
+}
