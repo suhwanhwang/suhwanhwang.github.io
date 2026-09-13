@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "해리포터 1권 원서 단어장 1,692개"
+title: "해리포터 1권 원서 단어장 1,688개"
 date: 2026-09-12 21:00:00 +0900
 categories: english
 tags: [vocabulary, reading, harry-potter]
 ---
 
 해리포터 1권 *Harry Potter and the Sorcerer's Stone*을 원서로 읽으려고 만든 단어장이다.
-17개 챕터, 본문 약 8만 단어에서 뽑은 1,692개를 챕터별로 정리했다.
+17개 챕터, 본문 약 8만 단어에서 뽑은 1,688개를 챕터별로 정리했다.
 아래가 전체 목록이고, 앞부분에 어떤 기준으로 골랐는지와 표 보는 법을 먼저 적어 둔다.
 
 ## 무엇을 넣고 무엇을 뺐나
@@ -15,10 +15,13 @@ tags: [vocabulary, reading, harry-potter]
 - **챕터별 첫 등장 기준.** 어떤 단어가 3장에서 처음 나왔다면 3장 표에만 들어간다.
   4장에서 또 나와도 4장 표에는 없다. 그래서 앞 챕터일수록 표가 길다.
 - **고유명사는 전부 뺐다.** 인물·지명·상표·주문 이름은 외울 어휘가 아니라 그냥 이름이다.
-  이것까지 넣으면 2,100개가 넘는데, 실제로 공부할 값어치가 있는 건 이 1,692개다.
+  이것까지 넣으면 2,100개가 넘는데, 실제로 공부할 값어치가 있는 건 이 1,688개다.
 - **작중 사투리 표기도 뺐다.** `yeh`(you), `yer`(your), `summat`(something)처럼 등장인물의
   말투를 적은 철자는 사전에 없는 형태라 제외했다. 다만 `dunno`, `oughta`, `coulda`,
   `shoulda`처럼 실제 구어에서 널리 쓰이는 축약 표기는 남겼다.
+- **스캔본 오탈자에서 온 항목은 뺐다.** 원서 텍스트를 기계로 읽으면 `pale`이 `pate`로,
+  등장인물 이름 `Spinnet`이 `spinner`로 잘못 잡히는 일이 있다. 사전에는 있는 단어라도
+  책에 그 뜻으로 쓰인 적이 없으면 외울 이유가 없어서 걸러 냈다.
 - **예문은 책 원문이 아니다.** 뜻이 바로 와닿는 쉬운 문장을 단어마다 따로 붙였다.
   원문 발췌는 앞뒤 맥락이 없으면 오히려 어렵고, 마법 세계 설정에 기대는 문장이 많아서
   단어 뜻을 익히는 데는 일상적인 예문이 낫다고 봤다.
@@ -50,24 +53,24 @@ tags: [vocabulary, reading, harry-potter]
 | 2 | 116 | 3,560 | 3.3% |
 | 3 | 138 | 3,962 | 3.5% |
 | 4 | 124 | 3,813 | 3.3% |
-| 5 | 201 | 6,806 | 3.0% |
+| 5 | 199 | 6,806 | 2.9% |
 | 6 | 114 | 6,561 | 1.7% |
 | 7 | 117 | 4,596 | 2.5% |
 | 8 | 72 | 3,151 | 2.3% |
-| 9 | 95 | 5,105 | 1.9% |
+| 9 | 94 | 5,105 | 1.8% |
 | 10 | 72 | 4,436 | 1.6% |
-| 11 | 43 | 3,439 | 1.3% |
+| 11 | 42 | 3,439 | 1.2% |
 | 12 | 94 | 5,659 | 1.7% |
 | 13 | 38 | 3,351 | 1.1% |
 | 14 | 48 | 3,631 | 1.3% |
 | 15 | 67 | 5,323 | 1.3% |
 | 16 | 90 | 6,704 | 1.3% |
 | 17 | 63 | 5,651 | 1.1% |
-| **합계** | **1,692** | **80,522** | **2.1%** |
+| **합계** | **1,688** | **80,522** | **2.1%** |
 
-어휘 부담이 앞쪽에 심하게 몰려 있다. 1~5장이 779개로 전체의 46%인데, 분량으로는 책의 28%밖에
-안 된다. 1~7장까지 넓히면 1,010개, 60%다. 5장이 201개로 가장 많은 이유는 분량이 길어서만은
-아니다. 6장과 본문 길이가 비슷한데 새 단어는 1.8배다. 낯선 세계의 물건 이름이 한꺼번에 쏟아지는
+어휘 부담이 앞쪽에 심하게 몰려 있다. 1~5장이 777개로 전체의 46%인데, 분량으로는 책의 28%밖에
+안 된다. 1~7장까지 넓히면 1,008개, 60%다. 5장이 199개로 가장 많은 이유는 분량이 길어서만은
+아니다. 6장과 본문 길이가 비슷한데 새 단어는 1.7배다. 낯선 세계의 물건 이름이 한꺼번에 쏟아지는
 챕터라서 그렇다.
 
 뒤집어 말하면 **1~7장만 버티면 나머지는 훨씬 수월하다.** 13장부터는 새 단어 비율이 1% 초반으로
@@ -684,7 +687,7 @@ tags: [vocabulary, reading, harry-potter]
 
 ## Chapter 5
 
-> 새 단어 **201개** · 본문 6,806 단어
+> 새 단어 **199개** · 본문 6,806 단어
 
 | # | 단어 | 품사 | 빈도(챕터/전체) | 영어 뜻 | 한글 뜻 | 예문 |
 |---:|---|---|---:|---|---|---|
@@ -855,40 +858,38 @@ tags: [vocabulary, reading, harry-potter]
 | 165 | **mound** | n. | 1 / 1 | a raised heap of earth | 흙더미, 언덕 | The ants built a huge **mound** of dirt. |
 | 166 | **mysteriously** | adv. | 1 / 1 | in a puzzling, unexplained way | 알 수 없게, 불가사의하게 | My phone **mysteriously** stopped working. |
 | 167 | **newt** | n. | 1 / 1 | a small water-dwelling amphibian | 영원 (도롱뇽류) | We found a little **newt** in the pond. |
-| 168 | **pate** | n. | 1 / 1 | the top of the head | 정수리 | The sun burned his bald **pate**. |
-| 169 | **pave** | v. | 1 / 1 | to cover a road with stone or brick | 포장하다 | The city plans to **pave** the dirt road. |
-| 170 | **peel** | v. | 1 / 1 | to strip the skin off | 껍질을 벗기다 | Could you **peel** the potatoes? |
-| 171 | **pellet** | n. | 1 / 1 | a small hard ball of material | 알갱이, 작은 덩이 | The farmer fed the rabbits food **pellets**. |
-| 172 | **phial** | n. | 1 / 1 | a small glass bottle | 작은 유리병 | The chemist held up a tiny **phial** of blue liquid. |
-| 173 | **pliable** | adj. | 1 / 1 | easily bent or influenced | 잘 구부러지는, 유연한 | Warm wax is soft and **pliable**. |
-| 174 | **pouch** | n. | 1 / 1 | a small bag | 주머니, 쌈지 | The kangaroo carried her baby in her **pouch**. |
-| 175 | **raspberry** | n. | 1 / 1 | a soft red berry | 산딸기, 라즈베리 | She picked **raspberries** in the garden. |
-| 176 | **ravine** | n. | 1 / 1 | a deep narrow valley | 협곡 | The bridge crosses a deep **ravine**. |
-| 177 | **rotted** | adj. | 1 / 1 | decayed | 썩은 | The **rotted** wooden steps broke under his weight. |
-| 178 | **ruby** | n. | 1 / 1 | a deep red jewel | 루비 | Her ring had a large **ruby** in the middle. |
-| 179 | **rustle** | v. | 1 / 1 | to make a soft crackling sound | 바스락거리다 | The leaves **rustled** in the wind. |
-| 180 | **sherry** | n. | 1 / 1 | a strong fortified wine | 셰리주 | The old lady offered us a glass of **sherry**. |
-| 181 | **slimy** | adj. | 1 / 1 | covered with slime | 미끈거리는, 끈적한 | The rocks were covered in **slimy** green moss. |
-| 182 | **smatter** | n. | 1 / 1 | a slight scattering or smattering | 약간, 조금 흩뿌려진 것 | There was a **smatter** of applause from the back row. |
-| 183 | **smuggle** | v. | 1 / 1 | to move goods secretly and illegally | 밀수하다, 몰래 들여오다 | They tried to **smuggle** a puppy into the hotel. |
-| 184 | **spleen** | n. | 1 / 1 | an organ near the stomach | 지라, 비장 | The **spleen** helps the body fight infection. |
-| 185 | **spore** | n. | 1 / 1 | a tiny reproductive cell of a fungus | 포자 | Mushrooms spread by releasing **spores**. |
-| 186 | **springy** | adj. | 1 / 1 | bouncing back when pressed | 탄력 있는 | The grass felt soft and **springy** under our feet. |
-| 187 | **squat** | v./adj. | 1 / 1 | short and thick; to crouch | 땅딸막한; 쪼그려 앉다 | He **squatted** down to tie his shoe. |
-| 188 | **steeply** | adv. | 1 / 1 | at a sharp slope | 가파르게 | The path climbed **steeply** through the forest. |
-| 189 | **sting** | v. | 1 / 1 | to prick painfully | 쏘다, 따끔거리다 | A bee **stung** me on the arm. |
-| 190 | **stirring** | adj. | 1 / 1 | mixing by moving around; also thrilling | 휘젓는; 가슴 뛰게 하는 | The coach gave a **stirring** speech before the game. |
-| 191 | **supple** | adj. | 1 / 1 | bending easily | 나긋나긋한, 유연한 | Yoga keeps your body **supple**. |
-| 192 | **surname** | n. | 1 / 1 | a family name | 성(姓) | Please write your first name and **surname**. |
-| 193 | **swarthy** | adj. | 1 / 1 | dark-skinned | 거무스름한 | A **swarthy** sailor stood at the wheel. |
-| 194 | **swishy** | adj. | 1 / 1 | making a light swishing movement | 휙휙 소리 나는 | She loved her **swishy** new skirt. |
-| 195 | **teabag** | n. | 1 / 1 | a small bag of tea leaves | 티백 | Leave the **teabag** in for three minutes. |
-| 196 | **tingle** | v. | 1 / 1 | to feel a slight prickling | 따끔따끔하다, 찌릿하다 | My fingers **tingled** from the cold. |
-| 197 | **tinkle** | v. | 1 / 1 | to make a light ringing sound | 딸랑거리다 | A bell **tinkled** as we opened the shop door. |
-| 198 | **unlock** | v. | 1 / 1 | to open a lock | 잠금을 풀다 | She **unlocked** the front door. |
-| 199 | **walled** | adj. | 1 / 1 | surrounded by a wall | 벽으로 둘러싸인 | The old city is **walled** on all sides. |
-| 200 | **whippy** | adj. | 1 / 1 | flexible and springy like a whip | 낭창낭창한 | He cut a long, **whippy** stick from the willow. |
-| 201 | **willow** | n. | 1 / 1 | a tree with drooping branches | 버드나무 | A **willow** hung over the river. |
+| 168 | **pave** | v. | 1 / 1 | to cover a road with stone or brick | 포장하다 | The city plans to **pave** the dirt road. |
+| 169 | **peel** | v. | 1 / 1 | to strip the skin off | 껍질을 벗기다 | Could you **peel** the potatoes? |
+| 170 | **pellet** | n. | 1 / 1 | a small hard ball of material | 알갱이, 작은 덩이 | The farmer fed the rabbits food **pellets**. |
+| 171 | **phial** | n. | 1 / 1 | a small glass bottle | 작은 유리병 | The chemist held up a tiny **phial** of blue liquid. |
+| 172 | **pliable** | adj. | 1 / 1 | easily bent or influenced | 잘 구부러지는, 유연한 | Warm wax is soft and **pliable**. |
+| 173 | **pouch** | n. | 1 / 1 | a small bag | 주머니, 쌈지 | The kangaroo carried her baby in her **pouch**. |
+| 174 | **raspberry** | n. | 1 / 1 | a soft red berry | 산딸기, 라즈베리 | She picked **raspberries** in the garden. |
+| 175 | **ravine** | n. | 1 / 1 | a deep narrow valley | 협곡 | The bridge crosses a deep **ravine**. |
+| 176 | **rotted** | adj. | 1 / 1 | decayed | 썩은 | The **rotted** wooden steps broke under his weight. |
+| 177 | **ruby** | n. | 1 / 1 | a deep red jewel | 루비 | Her ring had a large **ruby** in the middle. |
+| 178 | **rustle** | v. | 1 / 1 | to make a soft crackling sound | 바스락거리다 | The leaves **rustled** in the wind. |
+| 179 | **sherry** | n. | 1 / 1 | a strong fortified wine | 셰리주 | The old lady offered us a glass of **sherry**. |
+| 180 | **slimy** | adj. | 1 / 1 | covered with slime | 미끈거리는, 끈적한 | The rocks were covered in **slimy** green moss. |
+| 181 | **smuggle** | v. | 1 / 1 | to move goods secretly and illegally | 밀수하다, 몰래 들여오다 | They tried to **smuggle** a puppy into the hotel. |
+| 182 | **spleen** | n. | 1 / 1 | an organ near the stomach | 지라, 비장 | The **spleen** helps the body fight infection. |
+| 183 | **spore** | n. | 1 / 1 | a tiny reproductive cell of a fungus | 포자 | Mushrooms spread by releasing **spores**. |
+| 184 | **springy** | adj. | 1 / 1 | bouncing back when pressed | 탄력 있는 | The grass felt soft and **springy** under our feet. |
+| 185 | **squat** | v./adj. | 1 / 1 | short and thick; to crouch | 땅딸막한; 쪼그려 앉다 | He **squatted** down to tie his shoe. |
+| 186 | **steeply** | adv. | 1 / 1 | at a sharp slope | 가파르게 | The path climbed **steeply** through the forest. |
+| 187 | **sting** | v. | 1 / 1 | to prick painfully | 쏘다, 따끔거리다 | A bee **stung** me on the arm. |
+| 188 | **stirring** | adj. | 1 / 1 | mixing by moving around; also thrilling | 휘젓는; 가슴 뛰게 하는 | The coach gave a **stirring** speech before the game. |
+| 189 | **supple** | adj. | 1 / 1 | bending easily | 나긋나긋한, 유연한 | Yoga keeps your body **supple**. |
+| 190 | **surname** | n. | 1 / 1 | a family name | 성(姓) | Please write your first name and **surname**. |
+| 191 | **swarthy** | adj. | 1 / 1 | dark-skinned | 거무스름한 | A **swarthy** sailor stood at the wheel. |
+| 192 | **swishy** | adj. | 1 / 1 | making a light swishing movement | 휙휙 소리 나는 | She loved her **swishy** new skirt. |
+| 193 | **teabag** | n. | 1 / 1 | a small bag of tea leaves | 티백 | Leave the **teabag** in for three minutes. |
+| 194 | **tingle** | v. | 1 / 1 | to feel a slight prickling | 따끔따끔하다, 찌릿하다 | My fingers **tingled** from the cold. |
+| 195 | **tinkle** | v. | 1 / 1 | to make a light ringing sound | 딸랑거리다 | A bell **tinkled** as we opened the shop door. |
+| 196 | **unlock** | v. | 1 / 1 | to open a lock | 잠금을 풀다 | She **unlocked** the front door. |
+| 197 | **walled** | adj. | 1 / 1 | surrounded by a wall | 벽으로 둘러싸인 | The old city is **walled** on all sides. |
+| 198 | **whippy** | adj. | 1 / 1 | flexible and springy like a whip | 낭창낭창한 | He cut a long, **whippy** stick from the willow. |
+| 199 | **willow** | n. | 1 / 1 | a tree with drooping branches | 버드나무 | A **willow** hung over the river. |
 
 ## Chapter 6
 
@@ -1216,7 +1217,7 @@ tags: [vocabulary, reading, harry-potter]
 
 ## Chapter 9
 
-> 새 단어 **95개** · 본문 5,105 단어
+> 새 단어 **94개** · 본문 5,105 단어
 
 | # | 단어 | 품사 | 빈도(챕터/전체) | 영어 뜻 | 한글 뜻 | 예문 |
 |---:|---|---|---:|---|---|---|
@@ -1312,9 +1313,8 @@ tags: [vocabulary, reading, harry-potter]
 | 90 | **topmost** | adj. | 1 / 1 | highest | 맨 위의 | The cat climbed to the **topmost** branch. |
 | 91 | **triumphant** | adj. | 1 / 1 | showing great victory | 의기양양한 | The **triumphant** team lifted the trophy. |
 | 92 | **unlocked** | adj. | 1 / 1 | not locked; opened | 잠기지 않은 | Someone left the car **unlocked**. |
-| 93 | **upf** | int. | 1 / 1 | the sound of air knocked out by an impact | 억 (부딪혀 숨이 막히는 소리) | "**Upf!**" he grunted as he hit the ground. |
-| 94 | **whoosh** | int./n. | 1 / 1 | the sound of something rushing past | 휙 (지나가는 소리) | The train went by with a **whoosh**. |
-| 95 | **wickedly** | adv. | 1 / 1 | in an evil or mischievous way | 짓궂게, 사악하게 | He grinned **wickedly**. |
+| 93 | **whoosh** | int./n. | 1 / 1 | the sound of something rushing past | 휙 (지나가는 소리) | The train went by with a **whoosh**. |
+| 94 | **wickedly** | adv. | 1 / 1 | in an evil or mischievous way | 짓궂게, 사악하게 | He grinned **wickedly**. |
 
 ## Chapter 10
 
@@ -1397,7 +1397,7 @@ tags: [vocabulary, reading, harry-potter]
 
 ## Chapter 11
 
-> 새 단어 **43개** · 본문 3,439 단어
+> 새 단어 **42개** · 본문 3,439 단어
 
 | # | 단어 | 품사 | 빈도(챕터/전체) | 영어 뜻 | 한글 뜻 | 예문 |
 |---:|---|---|---:|---|---|---|
@@ -1438,12 +1438,11 @@ tags: [vocabulary, reading, harry-potter]
 | 35 | **ref** | n. | 1 / 1 | short for referee | 심판 (referee의 줄임말) | The **ref** blew his whistle. |
 | 36 | **restless** | adj. | 1 / 1 | unable to stay still | 안절부절못하는 | The children grew **restless** during the long speech. |
 | 37 | **speck** | n. | 1 / 1 | a tiny spot | 작은 점, 티끌 | There's a **speck** of dust on the lens. |
-| 38 | **spinner** | n. | 1 / 1 | a thing or person that spins | 도는 것, 돌리는 사람 | The fishing lure has a small metal **spinner**. |
-| 39 | **spurt** | n./v. | 1 / 1 | a sudden gush or burst of speed | 분출, 갑작스러운 가속 | Water **spurted** from the broken pipe. |
-| 40 | **swishing** | adj. | 1 / 1 | making a light whooshing movement | 휙휙 소리 나는 | I heard the **swishing** of her long skirt. |
-| 41 | **twitching** | adj. | 1 / 1 | making small jerky movements | 씰룩거리는 | His **twitching** eye showed he was nervous. |
-| 42 | **unseat** | v. | 1 / 1 | to throw a rider off | (말·빗자루에서) 떨어뜨리다 | The horse bucked and **unseated** its rider. |
-| 43 | **wheedle** | v. | 1 / 1 | to coax by flattery | 살살 구슬리다 | She **wheedled** her dad into buying her a new phone. |
+| 38 | **spurt** | n./v. | 1 / 1 | a sudden gush or burst of speed | 분출, 갑작스러운 가속 | Water **spurted** from the broken pipe. |
+| 39 | **swishing** | adj. | 1 / 1 | making a light whooshing movement | 휙휙 소리 나는 | I heard the **swishing** of her long skirt. |
+| 40 | **twitching** | adj. | 1 / 1 | making small jerky movements | 씰룩거리는 | His **twitching** eye showed he was nervous. |
+| 41 | **unseat** | v. | 1 / 1 | to throw a rider off | (말·빗자루에서) 떨어뜨리다 | The horse bucked and **unseated** its rider. |
+| 42 | **wheedle** | v. | 1 / 1 | to coax by flattery | 살살 구슬리다 | She **wheedled** her dad into buying her a new phone. |
 
 ## Chapter 12
 
