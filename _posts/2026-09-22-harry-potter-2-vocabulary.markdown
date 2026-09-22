@@ -720,7 +720,7 @@ tags: [vocabulary, reading, harry-potter]
 | 87 | **coil** | n. | 1 / 4 | 똬리를 틀다; 사리, 고리<br>to wind into rings; a wound ring<br>*The snake **coiled** itself around the branch.* |
 | 88 | **emit** | v. | 1 / 4 | 내뿜다, 방출하다<br>to give off, such as light, sound, or gas<br>*The machine began to **emit** a strange humming sound.* |
 | 89 | **fade** | v. | 1 / 4 | 서서히 사라지다, 바래다<br>to grow faint and disappear<br>*The music slowly **faded** away.* |
-| 90 | **gadding** | v. | 1 / 4 | (gadding about) 놀러 다니는, 쏘다니는<br>wandering about idly or in search of pleasure<br>*She's always gadding about town instead of studying.* |
+| 90 | **gadding** | v. | 1 / 4 | (gadding about) 놀러 다니는, 쏘다니는<br>wandering about idly or in search of pleasure<br>*She's always **gadding** about town instead of studying.* |
 | 91 | **interrupt** | v. | 1 / 4 | 방해하다, 말을 가로막다<br>to break in on someone speaking<br>*Sorry to **interrupt**, but your taxi is here.* |
 | 92 | **leap** | v. | 1 / 4 | 뛰어오르다<br>to jump a long way or high<br>*The cat **leaped** onto the table.* |
 | 93 | **poisonous** | adj. | 1 / 4 | 독이 있는<br>containing poison; venomous<br>*Some mushrooms are **poisonous**.* |
@@ -763,7 +763,7 @@ tags: [vocabulary, reading, harry-potter]
 | 130 | **greasy** | n. | 1 / 2 | 기름진, 번들거리는<br>covered in grease; oily<br>*I don't like **greasy** food.* |
 | 131 | **grim** | adj. | 1 / 2 | 험악한, 암울한<br>stern and forbidding; bleak<br>*The doctor's face was **grim**.* |
 | 132 | **gruffly** | adv. | 1 / 2 | 퉁명스럽게, 투박한 목소리로<br>in a rough, deep, unfriendly voice<br>*"Sit down," the old man said **gruffly**.* |
-| 133 | **hags** | n. | 1 / 2 | 마귀할멈들 (hag의 복수)<br>plural of hag: ugly, malicious old women in folklore<br>*The old tale featured three hags who lived deep in the forest.* |
+| 133 | **hags** | n. | 1 / 2 | 마귀할멈들 (hag의 복수)<br>plural of hag: ugly, malicious old women in folklore<br>*The old tale featured three **hags** who lived deep in the forest.* |
 | 134 | **indignantly** | adv. | 1 / 2 | 분개하여<br>in a way that shows anger at unfair treatment<br>*"That's not fair!" he said **indignantly**.* |
 | 135 | **leer** | v. | 1 / 2 | 흘겨보다, 능글맞게 보다<br>to look with an unpleasant sly smile<br>*The man **leered** at her from across the bar.* |
 | 136 | **longingly** | adv. | 1 / 2 | 애타게, 그리운 듯이<br>with strong yearning<br>*The boy looked **longingly** at the toys in the window.* |
